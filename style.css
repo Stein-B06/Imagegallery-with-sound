@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("farm.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1 {
+  position: absolute;
+  top: 30px;
+}
+.h3 {
+  position: absolute;
+  top: 280px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  background: rgb(86, 48, 3);
+  color: rgb(221, 99, 23);
+  font-size: 25px;
+}
+img {
+  width: 250px;
+  padding: 2px;
+  border: 1px solid brown;
+  border-radius: 10px;
+  background-color: brown;
+}
