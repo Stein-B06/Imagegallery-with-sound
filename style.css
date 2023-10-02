@@ -10,22 +10,50 @@ body {
   background-attachment: fixed;
 }
 h1 {
+  font-size: 65px;
+  font-family: "Tilt Prism", cursive;
+  color: rgb(176, 166, 33);
+
   position: absolute;
-  top: 30px;
+  top: 0%;
+  left: 50%;
+  padding-top: 30px;
+  transform: translateX(-50%);
+  text-align: center;
 }
-.h3 {
-  position: absolute;
-  top: 280px;
-  padding: 0px 10px;
-  border-radius: 10px;
-  background: rgb(86, 48, 3);
-  color: rgb(221, 99, 23);
-  font-size: 25px;
+
+.image-container {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
 }
 img {
-  width: 250px;
-  padding: 2px;
-  border: 1px solid brown;
+  width: 200px;
+  cursor: pointer;
   border-radius: 10px;
-  background-color: brown;
+}
+
+}
+img:hover {
+  transform: scale(1.5);
+  transition: 1s;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 100px;
+  }
 }
