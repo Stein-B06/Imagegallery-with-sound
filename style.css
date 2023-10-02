@@ -36,7 +36,6 @@ img {
   border-radius: 10px;
 }
 
-}
 img:hover {
   transform: scale(1.5);
   transition: 1s;
@@ -46,7 +45,6 @@ img:hover {
   h1 {
     font-size: 30px;
   }
-
 
   .image-container {
     flex-direction: column;
