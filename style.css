@@ -10,48 +10,72 @@ body {
   background-attachment: fixed;
 }
 h1 {
-  font-size: 65px;
+  font-size: 50px;
   font-family: "Tilt Prism", cursive;
   color: rgb(176, 166, 33);
-
   position: absolute;
-  top: 0%;
+  top: 0px;
   left: 50%;
   padding-top: 30px;
   transform: translateX(-50%);
   text-align: center;
 }
 
-.image-container {
-  position: relative;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 50px;
-}
-img {
-  width: 200px;
-  cursor: pointer;
-  border-radius: 10px;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns in the grid */
+  gap: 20px; /* Adjust the gap as needed */
+  margin-top: 20px;
 }
 
-img:hover {
-  transform: scale(1.5);
-  transition: 1s;
-  z-index: 2;
+span {
+  background-color: rgb(226, 140, 55);
+  padding: 5px;
 }
+
+.image-card {
+  color: aliceblue;
+  text-align: center;
+
+  font-size: 15px;
+}
+
+img {
+  width: 50%;
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  animation: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+p {
+  text-align: center;
+  padding: 3px;
+}
+
 @media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   h1 {
     font-size: 30px;
-  }
-
-  .image-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  img {
-    width: 100px;
   }
 }

@@ -1,22 +1,33 @@
-const images = document.querySelectorAll(".image-container img");
+const imageCards = document.querySelectorAll(".image-card");
 const sounds = document.querySelectorAll("audio");
 
-images.forEach((image, index) => {
-  image.addEventListener("click", () => {
+imageCards.forEach((card, index) => {
+  const image = card.querySelector("img");
+  card.addEventListener("click", () => {
     playSound(index);
+    shakeImage(image, sounds[index]);
   });
 
-  // Add key event listeners (1-5)
+  // Add key event listeners (1-6)
   window.addEventListener("keydown", (e) => {
-    if (e.key >= "1" && e.key <= "5") {
-      playSound(parseInt(e.key) - 1);
+    if (e.key >= "1" && e.key <= "6") {
+      const keyIndex = parseInt(e.key) - 1;
+      playSound(keyIndex);
+      shakeImage(imageCards[keyIndex].querySelector("img"), sounds[keyIndex]);
     }
   });
 });
 
 function playSound(index) {
   if (index >= 0 && index < sounds.length) {
-    sounds[index].currentTime = 0; // Reset audio to start
+    sounds[index].currentTime = 0;
     sounds[index].play();
   }
+}
+
+function shakeImage(image, sound) {
+  image.style.animation = "shake 0.5s";
+  sound.addEventListener("ended", () => {
+    image.style.animation = "none";
+  });
 }
