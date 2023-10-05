@@ -6,37 +6,36 @@ body {
   align-items: center;
   background-image: url("farm.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 h1 {
   font-size: 50px;
   font-family: "Tilt Prism", cursive;
-  color: rgb(92, 86, 3);
+  color: rgb(229, 216, 40);
   position: absolute;
   top: 0px;
   left: 50%;
   padding-top: 30px;
   transform: translateX(-50%);
   text-align: center;
+  background-color: brown;
+  border: 1px solid rgb(1, 1, 23);
+  border-radius: 25px;
+  padding: 8px;
+}
+span {
+  font-size: 30px;
 }
 
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns in the grid */
-  gap: 20px; /* Adjust the gap as needed */
-  margin-top: 20px;
-}
-
-span {
-  background-color: rgb(226, 140, 55);
-  padding: 5px;
+  gap: 10px; /* Adjust the gap as needed */
+  margin-top: 200px;
 }
 
 .image-card {
-  color: aliceblue;
+  color: rgb(110, 155, 194);
   text-align: center;
-
   font-size: 15px;
 }
 
