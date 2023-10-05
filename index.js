@@ -50,3 +50,8 @@ function playSound(soundSrc) {
 function shakeImage(image) {
   image.style.animation = "shake 1.0s";
 }
+
+//and to end the shake after finish
+setTimeout(() => {
+  image.style.animation = "none";
+}, 500);
