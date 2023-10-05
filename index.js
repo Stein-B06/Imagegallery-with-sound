@@ -27,15 +27,22 @@ function createAndAddImageCards() {
     const description = document.createElement("p");
     description.textContent = data.description;
 
-    // Add click event so image play sound and shake
-    imageCard.addEventListener("click", () => {
+    // Add click event so image play sound and shake when clicked on
+    image.addEventListener("click", () => {
       playSound(data.sound);
       shakeImage(image);
     });
 
+    // Prevent dragging the images behavior
+    image.addEventListener("dragstart", (event) => {
+      event.preventDefault();
+    });
+
+    //code for appending the image and description elem. to image card.
     imageCard.appendChild(image);
     imageCard.appendChild(description);
 
+    //append the image card to image grid
     imageGrid.appendChild(imageCard);
   });
 }

@@ -10,36 +10,48 @@ body {
 h1 {
   font-size: 50px;
   font-family: "Tilt Prism", cursive;
-  color: rgb(229, 216, 40);
+  color: rgb(201, 190, 43);
   position: absolute;
   top: 0px;
   left: 50%;
-  padding-top: 30px;
+  padding: 15px;
   transform: translateX(-50%);
   text-align: center;
   background-color: brown;
   border: 1px solid rgb(1, 1, 23);
   border-radius: 25px;
-  padding: 8px;
 }
+
+/*for the head text*/
 span {
   font-size: 30px;
 }
 
+/* styling for the image grid*/
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns in the grid */
-  gap: 10px; /* Adjust the gap as needed */
+  gap: 30px;
   margin-top: 200px;
 }
 
+/*styling for the cards and paragraph*/
 .image-card {
-  color: rgb(110, 155, 194);
-  text-align: center;
-  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p {
+  font-size: 20px;
+  margin: 5px;
+  padding: 10px;
+  background-color: brown;
+  color: #eae4e4;
+  border-radius: 10px;
 }
 
 img {
+  border-radius: 25px;
   width: 50%;
   max-width: 100%;
   cursor: pointer;
@@ -65,16 +77,20 @@ img {
   }
 }
 
-p {
-  text-align: center;
-  padding: 3px;
-}
-
 @media (max-width: 768px) {
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   h1 {
     font-size: 30px;
+  }
+  p {
+    font-size: 12px;
+  }
+  img {
+    width: 65%;
+  }
+  span {
+    font-size: 20px;
   }
 }
