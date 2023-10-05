@@ -48,10 +48,23 @@ function playSound(soundSrc) {
 
 //code to make images sdhake
 function shakeImage(image) {
-  image.style.animation = "shake 1.0s";
+  // Add the 'shake' class to trigger the animation
+  image.classList.add("shake");
+  image.style.animation = "shake 0.5s";
+  // After a short delay, remove the 'shake' class to reset the animation
+  setTimeout(() => {
+    image.style.animation = "none";
+  }, 500);
+
+  // Ensure the animation is removed even if the user clicks rapidly
+  image.addEventListener(
+    "animationend",
+    () => {
+      image.classList.remove("shake");
+    },
+    { once: true }
+  );
 }
 
-//and to end the shake after finish
-setTimeout(() => {
-  image.style.animation = "none";
-}, 500);
+//code for calling the function to create and add images when the page loads
+window.addEventListener("load", createAndAddImageCards);
