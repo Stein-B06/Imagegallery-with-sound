@@ -1,36 +1,52 @@
-//Added the data for the images and the sounds.
+//images and description added
 const imageData = [
-  { src: "cow.jpg", description: "Cow sound", sound: "cow.mp3" },
-  { src: "pig.jpg", description: "Pig sound", sound: "pig.mp3" },
-  { src: "rooster.jpg", description: "Rooster sound", sound: "rooster.mp3" },
-  { src: "sheep.jpg", description: "Sheep sound", sound: "sheep.mp3" },
-  { src: "turkey.jpg", description: "Turkey sound", sound: "turkey.mp3" },
-  { src: "horse.jpg", description: "Horse sound", sound: "horse.mp3" },
+  { src: "cow.jpg", description: "Sound of a cow", sound: "cow.mp3" },
+  { src: "pig.jpg", description: "Sound of a pig", sound: "pig.mp3" },
+  { src: "sheep.jpg", description: "Sound of a sheep", sound: "sheep.mp3" },
+  {
+    src: "rooster.jpg",
+    description: "Sound of a rooster",
+    sound: "rooster.mp3",
+  },
+  { src: "turkey.jpg", description: "Sound of a turkey", sound: "turkey.mp3" },
+  { src: "horse.jpg", description: "Sound of a horse", sound: "horse.mp3" },
 ];
+
 // Function to create and add image cards to the page
-function createAndAddImageCard() {
-  const imageGrid = document.getElementById(ìmage - grid);
+function createAndAddImageCards() {
+  const imageGrid = document.getElementById("image-grid");
 
-  imageData.forEach((data)) => {
-    const imageCard = document.createElement(`div`)
- imageCard.classList.add(`image-card`)
+  imageData.forEach((data) => {
+    const imageCard = document.createElement("div");
+    imageCard.classList.add("image-card");
 
- const image = document.createElement(`img`)
- image.src =data.src;
- image.alt = data.description;
+    const image = document.createElement("img");
+    image.src = data.src;
+    image.alt = data.description;
 
- const description = document.createElement(`p`);
-description.textContent = data.description;
+    const description = document.createElement("p");
+    description.textContent = data.description;
 
- //added click event so that image plays sound and shakes
-imageCard.addEventListener(`click`, () => {
-  playSound(data.sound)
-  shakeImage(image);
+    // Add click event so image play sound and shake
+    imageCard.addEventListener("click", () => {
+      playSound(data.sound);
+      shakeImage(image);
+    });
+
+    imageCard.appendChild(image);
+    imageCard.appendChild(description);
+
+    imageGrid.appendChild(imageCard);
+  });
 }
-)
-imageCard.appendChild(image);
-imageCard.appendChild(description);
-imageGrid.appendChild(imageCard);
 
-  }
+//function to play sound
+function playSound(soundSrc) {
+  const audio = new Audio(soundSrc);
+  audio.play();
+}
+
+//code to make images sdhake
+function shakeImage(image) {
+  image.style.animation = "shake 1.0s";
 }
