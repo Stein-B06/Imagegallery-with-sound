@@ -1,4 +1,4 @@
-//images and description added
+//images and sound added
 const imageData = [
   { src: "cow.jpg", description: "Sound of a cow", sound: "cow.mp3" },
   { src: "pig.jpg", description: "Sound of a pig", sound: "pig.mp3" },
