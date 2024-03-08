@@ -8,7 +8,7 @@ const imageData = [
     description: "Sound of a rooster",
     sound: "rooster.mp3",
   },
-  { src: "turkey.jpg", description: "Sound of a turkey", sound: "turkey.mp3" },
+  { src: "turkey.jpg", description: "Sound of a turkey", sound: "Turkey.mp3" },
   { src: "horse.jpg", description: "Sound of a horse", sound: "horse.mp3" },
 ];
 
