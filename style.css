@@ -52,7 +52,7 @@ p {
 
 img {
   border-radius: 25px;
-  width: 50%;
+  width: 40%;
   max-width: 100%;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -79,7 +79,7 @@ img {
 
 @media (max-width: 768px) {
   .image-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   h1 {
     font-size: 20px;
@@ -88,7 +88,7 @@ img {
     font-size: 12px;
   }
   img {
-    width: 65%;
+    width: 55%;
   }
   span {
     font-size: 20px;
