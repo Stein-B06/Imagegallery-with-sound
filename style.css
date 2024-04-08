@@ -17,7 +17,7 @@ h1 {
   padding: 15px;
   transform: translateX(-50%);
   text-align: center;
-  background-color: rgb(110, 13, 13);
+  background-color: rgb(23, 72, 25);
   border: 1px solid rgb(1, 1, 23);
   border-radius: 25px;
 }
@@ -45,7 +45,7 @@ p {
   font-size: 20px;
   margin: 5px;
   padding: 10px;
-  background-color: rgb(71, 12, 12);
+  background-color: rgb(12, 71, 34);
   color: #eae4e4;
   border-radius: 10px;
 }
